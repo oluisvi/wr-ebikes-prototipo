@@ -1,0 +1,96 @@
+/* Design direction 01 — Rota: editorial split hero, discovery tiles and product grid. */
+body[data-design="rota"] main>section{order:initial}
+
+/* Design direction 02 — Performance: image-led opener, oversized action typography,
+   asymmetric discovery row and a high-contrast product gallery. */
+body[data-design="performance"] main{display:flex;flex-direction:column}
+body[data-design="performance"] main>.hero{order:1;grid-template-columns:1.15fr .85fr;min-height:680px;padding-top:48px;padding-bottom:72px;gap:clamp(30px,5vw,70px)}
+body[data-design="performance"] .hero-media{grid-column:1;grid-row:1;align-self:stretch}
+body[data-design="performance"] .hero-media img{height:100%;min-height:570px;object-position:center}
+body[data-design="performance"] .hero-copy{grid-column:2;grid-row:1;align-self:center;padding:22px 0 22px 23px}
+body[data-design="performance"] main>.intro-row{order:2;grid-template-columns:.8fr 1.5fr auto}
+body[data-design="performance"] main>.category-section{order:3;padding-top:88px;padding-bottom:88px}
+body[data-design="performance"] .category-grid{grid-template-columns:1.4fr 1fr 1fr;align-items:stretch}
+body[data-design="performance"] .category-card{min-height:320px}
+body[data-design="performance"] .category-card.category-workshop{min-height:320px}
+body[data-design="performance"] main>.catalog-section{order:4;padding-top:70px;padding-bottom:90px;background:#1a1c1e}
+body[data-design="performance"] .catalog-heading{grid-template-columns:.8fr 1.2fr}
+body[data-design="performance"] .catalog-heading .section-summary{max-width:450px}
+body[data-design="performance"] .catalog-tools{display:grid;grid-template-columns:1fr auto;grid-template-areas:"filters count" "search search";padding-bottom:18px}
+body[data-design="performance"] .filter-list{grid-area:filters}
+body[data-design="performance"] .result-count{grid-area:count;justify-self:end}
+body[data-design="performance"] .search-field{grid-area:search;margin:8px 0 0;max-width:320px}
+body[data-design="performance"] .search-field input{width:250px}
+body[data-design="performance"] .product-grid{grid-template-columns:1.15fr 1fr 1fr;gap:14px}
+body[data-design="performance"] .product-card{padding:10px;background:#222426;border-bottom:2px solid var(--red)}
+body[data-design="performance"] .product-image img{aspect-ratio:1.05/1}
+body[data-design="performance"] main>.service-section{order:5;grid-template-columns:.9fr 1.1fr}
+body[data-design="performance"] main>.workshop-section{order:6;grid-template-columns:.75fr 1.25fr}
+body[data-design="performance"] main>.contact-section{order:7}
+
+/* Design direction 03 — Oficina: service-first flow and product rows instead of cards. */
+body[data-design="oficina"] main{display:flex;flex-direction:column}
+body[data-design="oficina"] main>.hero{order:1}
+body[data-design="oficina"] main>.intro-row{order:2}
+body[data-design="oficina"] main>.workshop-section{order:3;grid-template-columns:1.1fr .9fr;background:#e7e7e4}
+body[data-design="oficina"] .workshop-note{min-height:230px;border-left-width:5px}
+body[data-design="oficina"] main>.service-section{order:4;grid-template-columns:.72fr 1.28fr;min-height:330px}
+body[data-design="oficina"] .service-visual{min-height:330px}
+body[data-design="oficina"] main>.category-section{order:5;padding-top:76px;padding-bottom:68px}
+body[data-design="oficina"] .category-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+body[data-design="oficina"] .category-card{min-height:170px}
+body[data-design="oficina"] main>.catalog-section{order:6;padding-top:0;padding-bottom:82px}
+body[data-design="oficina"] .catalog-heading{grid-template-columns:1fr .75fr}
+body[data-design="oficina"] .product-grid{display:block}
+body[data-design="oficina"] .product-card{display:grid;grid-template-columns:190px minmax(0,1fr) auto;grid-template-rows:auto auto auto;align-items:center;gap:0 22px;padding:14px 0;border-top:1px solid var(--line)}
+body[data-design="oficina"] .product-image{grid-column:1;grid-row:1/span 3}
+body[data-design="oficina"] .product-image img{width:100%;height:148px;aspect-ratio:auto;object-fit:cover}
+body[data-design="oficina"] .image-label{font-size:6px}
+body[data-design="oficina"] .product-meta{grid-column:2/4;grid-row:1;align-self:end;margin:0 0 6px}
+body[data-design="oficina"] .product-card h3{grid-column:2;grid-row:2;align-self:center;margin:0 0 4px}
+body[data-design="oficina"] .product-card p{grid-column:2;grid-row:3;align-self:start;min-height:0;margin:0}
+body[data-design="oficina"] .product-link{grid-column:3;grid-row:2/span 2;align-self:center;min-width:155px;padding:12px 0 12px 14px;border-top:0;border-left:1px solid var(--line)}
+body[data-design="oficina"] main>.contact-section{order:7}
+
+@media(max-width:900px){
+  body[data-design="performance"] main>.hero{min-height:600px}
+  body[data-design="performance"] .hero-media img{min-height:490px}
+  body[data-design="performance"] .category-card,body[data-design="performance"] .category-card.category-workshop{min-height:255px}
+  body[data-design="oficina"] .product-card{grid-template-columns:160px minmax(0,1fr) auto;gap:0 16px}
+}
+@media(max-width:680px){
+  body[data-design="performance"] main>.hero{display:flex;flex-direction:column;min-height:0;padding:40px 20px 52px;gap:24px}
+  body[data-design="performance"] .hero-media{order:0;width:100%}
+  body[data-design="performance"] .hero-media img{height:auto;min-height:0;aspect-ratio:1.08/1}
+  body[data-design="performance"] .hero-copy{order:1;padding:0 0 0 14px}
+  body[data-design="performance"] main>.intro-row{grid-template-columns:1fr}
+  body[data-design="performance"] main>.category-section{padding-top:58px;padding-bottom:58px}
+  body[data-design="performance"] .category-grid{grid-template-columns:1fr 1fr}
+  body[data-design="performance"] .category-card{min-height:180px}
+  body[data-design="performance"] .category-workshop{grid-column:1/-1}
+  body[data-design="performance"] main>.catalog-section{padding-top:55px;padding-bottom:65px}
+  body[data-design="performance"] .catalog-heading{grid-template-columns:1fr}
+  body[data-design="performance"] .catalog-tools{display:flex;flex-wrap:wrap}
+  body[data-design="performance"] .filter-list{width:100%}
+  body[data-design="performance"] .search-field{margin:0 auto 0 0}
+  body[data-design="performance"] .product-grid{grid-template-columns:1fr 1fr}
+  body[data-design="performance"] main>.service-section{grid-template-columns:1fr}
+  body[data-design="performance"] main>.workshop-section{grid-template-columns:1fr}
+  body[data-design="oficina"] main>.hero{padding:32px 20px 50px;gap:23px}
+  body[data-design="oficina"] main>.workshop-section{grid-template-columns:1fr;gap:25px;padding:60px 20px}
+  body[data-design="oficina"] main>.service-section{grid-template-columns:1fr}
+  body[data-design="oficina"] .category-grid{grid-template-columns:1fr 1fr}
+  body[data-design="oficina"] .category-workshop{grid-column:1/-1}
+  body[data-design="oficina"] .catalog-heading{grid-template-columns:1fr}
+  body[data-design="oficina"] .product-card{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:auto;padding:0 0 15px;margin-bottom:18px;border-bottom:1px solid var(--line)}
+  body[data-design="oficina"] .product-image,body[data-design="oficina"] .product-meta,body[data-design="oficina"] .product-card h3,body[data-design="oficina"] .product-card p,body[data-design="oficina"] .product-link{grid-column:1;grid-row:auto}
+  body[data-design="oficina"] .product-image img{height:auto;aspect-ratio:1.1/1}
+  body[data-design="oficina"] .product-meta{margin-top:12px}
+  body[data-design="oficina"] .product-card h3{margin:8px 0 3px}
+  body[data-design="oficina"] .product-card p{margin:0 0 6px}
+  body[data-design="oficina"] .product-link{min-width:0;border-top:1px solid var(--line);border-left:0;padding:10px 0}
+}
+@media(max-width:390px){
+  body[data-design="performance"] .category-grid,body[data-design="oficina"] .category-grid{grid-template-columns:1fr}
+  body[data-design="performance"] .category-workshop,body[data-design="oficina"] .category-workshop{grid-column:auto}
+}

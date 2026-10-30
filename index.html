@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f6f4">
+  <meta name="description" content="Uma proposta de vitrine digital para a WR E-Bikes: conheça categorias de mobilidade elétrica e converse com a equipe.">
+  <meta property="og:title" content="WR E-Bikes — encontre seu próximo caminho">
+  <meta property="og:description" content="Protótipo conceitual com catálogo de referência, orientação de compra e contato com a WR E-Bikes.">
+  <title>WR E-Bikes — encontre seu próximo caminho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="designs.css">
+  <script src="app.js" defer></script>
+</head>
+<body data-design="rota">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="preview-bar">
+    <a class="wordmark wordmark-preview" href="#inicio" aria-label="WR E-Bikes, início"><span class="mark">WR</span><span class="mark-name">E-BIKES</span></a>
+    <div class="design-control">
+      <button class="design-trigger" id="design-trigger" type="button" aria-expanded="false" aria-controls="design-options">
+        <span>Visual: <strong id="design-current">Rota</strong></span><span class="trigger-icon" aria-hidden="true">⌄</span>
+      </button>
+      <div class="design-options" id="design-options" role="group" aria-label="Escolher o design do site" hidden>
+        <button type="button" class="design-option is-selected" data-design="rota" aria-pressed="true"><span class="option-number">01</span><span><strong>Rota</strong><small>Editorial e leve</small></span><span class="option-check" aria-hidden="true">✓</span></button>
+        <button type="button" class="design-option" data-design="performance" aria-pressed="false"><span class="option-number">02</span><span><strong>Performance</strong><small>Forte e esportivo</small></span><span class="option-check" aria-hidden="true">✓</span></button>
+        <button type="button" class="design-option" data-design="oficina" aria-pressed="false"><span class="option-number">03</span><span><strong>Oficina</strong><small>Próximo e técnico</small></span><span class="option-check" aria-hidden="true">✓</span></button>
+      </div>
+    </div>
+    <p class="preview-status" id="design-status" aria-live="polite">Protótipo · identidade WR E-Bikes</p>
+  </div>
+  <div class="page-shell" id="inicio">
+    <header class="site-header">
+      <a class="wordmark" href="#inicio" aria-label="WR E-Bikes, início"><span class="mark">WR</span><span class="mark-name">E-BIKES</span></a>
+      <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span><span class="menu-bars" aria-hidden="true">☰</span></button>
+      <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+        <a href="#modelos">Modelos</a><a href="#atendimento">Atendimento</a><a href="#oficina">Oficina</a>
+      </nav>
+      <a class="header-contact" href="https://wa.me/5512991419583?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20WR%20E-Bikes.%20Quero%20conhecer%20os%20modelos%20dispon%C3%ADveis." target="_blank" rel="noopener noreferrer">Fale com a WR <span aria-hidden="true">↗</span></a>
+    </header>
+    <main id="conteudo">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>MOBILIDADE ELÉTRICA · WR E-BIKES</p>
+          <h1 id="hero-title">Sua próxima rota <em>começa aqui.</em></h1>
+          <p class="hero-lede">Encontre uma bike ou scooter que combine com o seu dia — com orientação da equipe e uma oficina na própria loja.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#modelos">Explorar modelos <span aria-hidden="true">↓</span></a><a class="button button-quiet" href="#atendimento">Como podemos ajudar <span aria-hidden="true">↗</span></a></div>
+          <p class="hero-footnote">Conte como pretende usar. A equipe pode ajudar a encontrar uma opção adequada.</p>
+        </div>
+        <figure class="hero-media">
+          <img src="assets/scooter-trixx-600-reference.jpg" alt="Scooter elétrica Trixx fotografada em loja independente, imagem de referência" fetchpriority="high">
+          <figcaption><span>IMAGEM DE REFERÊNCIA</span><span>WR E-BIKES · MOBILIDADE ELÉTRICA</span></figcaption>
+        </figure>
+        <div class="hero-index" aria-hidden="true"><span>01</span><span>ESCOLHA SEU CAMINHO</span></div>
+      </section>
+      <section class="intro-row" aria-label="Atendimento da WR E-Bikes">
+        <p>Uma vitrine clara.<br><strong>Uma conversa mais direta.</strong></p>
+        <p>Veja as categorias, escolha o que chamou sua atenção e fale com a equipe sobre o modelo e a finalidade que você tem em mente.</p>
+        <a class="inline-link" href="#atendimento">Entenda o atendimento <span aria-hidden="true">↗</span></a>
+      </section>
+      <section class="category-section section-space" aria-labelledby="category-title">
+        <div class="section-heading">
+          <div><p class="section-kicker">ESCOLHA POR TIPO</p><h2 id="category-title">Por onde você<br><em>quer começar?</em></h2></div>
+          <p class="section-summary">Cada rotina pede uma experiência diferente. Explore o que procura e consulte quais opções estão disponíveis na loja.</p>
+        </div>
+        <div class="category-grid">
+          <a class="category-card category-scooters" href="#modelos" data-category-link="scooter"><span class="category-count">01 / MOBILIDADE</span><span class="category-copy"><strong>Scooters</strong><small>Conforto para os trajetos do dia</small></span><span class="arrow-circle" aria-hidden="true">↗</span></a>
+          <a class="category-card category-bikes" href="#modelos" data-category-link="bike"><span class="category-count">02 / PEDAL E ELÉTRICO</span><span class="category-copy"><strong>Bikes</strong><small>Encontre uma bike para sua rotina</small></span><span class="arrow-circle" aria-hidden="true">↗</span></a>
+          <a class="category-card category-workshop" href="#oficina"><span class="category-count">03 / CUIDADO</span><span class="category-copy"><strong>Oficina</strong><small>Manutenção e atendimento na loja</small></span><span class="arrow-circle" aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+      <section class="catalog-section section-space" id="modelos" aria-labelledby="catalog-title">
+        <div class="section-heading catalog-heading">
+          <div><p class="section-kicker">VITRINE DE REFERÊNCIA</p><h2 id="catalog-title">Veja o que combina<br><em>com a sua rotina.</em></h2></div>
+          <p class="section-summary">As imagens abaixo são referências visuais de modelos do segmento. Pergunte à WR quais produtos, versões e cores estão disponíveis.</p>
+        </div>
+        <div class="catalog-tools">
+          <div class="filter-list" role="group" aria-label="Filtrar por categoria">
+            <button class="filter-button is-active" type="button" data-filter="todos" aria-pressed="true">Todos</button><button class="filter-button" type="button" data-filter="scooter" aria-pressed="false">Scooters</button><button class="filter-button" type="button" data-filter="bike" aria-pressed="false">Bikes</button>
+          </div>
+          <label class="search-field"><span aria-hidden="true">⌕</span><input id="model-search" type="search" placeholder="Buscar na vitrine" aria-label="Buscar na vitrine"></label>
+          <p class="result-count" id="result-count" aria-live="polite">3 referências</p>
+        </div>
+        <div class="product-grid" id="product-grid">
+          <article class="product-card" data-category="scooter" data-name="scooter trixx urbana">
+            <a class="product-image" href="#contato" data-interest="scooter elétrica" aria-label="Consultar scooters elétricas com a WR"><img src="assets/scooter-trixx-reference.jpg" alt="Scooter elétrica Trixx fotografada em loja independente, imagem de referência" loading="lazy"><span class="image-label">FOTO DE REFERÊNCIA</span></a>
+            <div class="product-meta"><span>SCOOTERS ELÉTRICAS</span><span>01 / 03</span></div><h3>Scooter urbana</h3><p>Uma referência visual para explorar a categoria com a equipe.</p><a class="product-link" href="#contato" data-interest="scooter urbana">Consultar modelos <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="product-card" data-category="scooter" data-name="scooter trixx com cesta">
+            <a class="product-image" href="#contato" data-interest="scooter elétrica com cesta" aria-label="Consultar scooters elétricas com a WR"><img src="assets/scooter-trixx-600-reference.jpg" alt="Scooter elétrica Trixx com cesta, imagem de referência publicada pela Supra Bike" loading="lazy"><span class="image-label">FOTO DE REFERÊNCIA</span></a>
+            <div class="product-meta"><span>SCOOTERS ELÉTRICAS</span><span>02 / 03</span></div><h3>Scooter com cesta</h3><p>Compare formatos antes de conversar sobre os modelos atuais.</p><a class="product-link" href="#contato" data-interest="scooter com cesta">Consultar modelos <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="product-card" data-category="bike" data-name="bike elétrica trixx">
+            <a class="product-image" href="#contato" data-interest="bike elétrica" aria-label="Consultar bikes elétricas com a WR"><img src="assets/bike-caloi-e-vibe-reference.jpg" alt="Bicicleta elétrica Caloi E-Vibe Urbam, foto de catálogo usada apenas como referência visual" loading="lazy"><span class="image-label">FOTO DE REFERÊNCIA</span></a>
+            <div class="product-meta"><span>BIKES ELÉTRICAS</span><span>03 / 03</span></div><h3>Bike elétrica</h3><p>Veja a categoria e peça orientação para a finalidade que procura.</p><a class="product-link" href="#contato" data-interest="bike elétrica">Consultar modelos <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <p class="catalog-disclaimer">Imagens de varejistas usadas apenas para visualizar o conceito. Não são fotos da WR e não confirmam modelos, estoque, preço ou especificações vendidos pela loja. Substituir por fotos autorizadas da WR antes de uso comercial.</p>
+      </section>
+      <section class="service-section" id="atendimento" aria-labelledby="service-title">
+        <div class="service-visual" aria-hidden="true"><span class="service-number">WR / 01</span><span class="service-stamp">ESCUTA<br>ORIENTAÇÃO<br>ESCOLHA</span><span class="service-big-mark">WR</span></div>
+        <div class="service-copy"><p class="section-kicker">ATENDIMENTO CONSULTIVO</p><h2 id="service-title">A escolha começa<br>pela <em>sua necessidade.</em></h2><p>Se você já gostou de algum modelo, peça mais fotos. Se ainda está em dúvida, conte para a equipe como pretende usar e peça uma recomendação.</p><a class="button button-light" href="https://wa.me/5512991419583?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20WR%20E-Bikes.%20Quero%20uma%20orienta%C3%A7%C3%A3o%20para%20escolher%20um%20modelo." target="_blank" rel="noopener noreferrer">Conversar com a equipe <span aria-hidden="true">↗</span></a></div>
+      </section>
+      <section class="workshop-section section-space" id="oficina" aria-labelledby="workshop-title">
+        <div class="workshop-copy"><p class="section-kicker">OFICINA NA LOJA</p><h2 id="workshop-title">Mobilidade também<br>é ter <em>com quem contar.</em></h2><p>Além de apresentar os modelos, a WR conta com oficina. Consulte a equipe para saber como funciona o atendimento de manutenção.</p><a class="text-link" href="https://wa.me/5512991419583?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20WR%20E-Bikes.%20Quero%20saber%20sobre%20o%20atendimento%20da%20oficina." target="_blank" rel="noopener noreferrer">Perguntar sobre a oficina <span aria-hidden="true">↗</span></a></div>
+        <div class="workshop-note"><span class="note-icon" aria-hidden="true">+</span><p>MANUTENÇÃO<br><strong>Converse com a equipe sobre o seu modelo.</strong></p><span class="note-index">WR / OFICINA</span></div>
+      </section>
+      <section class="contact-section" id="contato" aria-labelledby="contact-title">
+        <div><p class="section-kicker">PRÓXIMO PASSO</p><h2 id="contact-title">Qual modelo<br>chamou sua atenção?</h2></div>
+        <div class="contact-copy"><p>Chame a WR, diga o que você procura e pergunte sobre fotos, disponibilidade e orientação para o seu uso.</p><a class="button button-primary" id="contact-cta" href="https://wa.me/5512991419583?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20WR%20E-Bikes.%20Quero%20conhecer%20os%20modelos%20dispon%C3%ADveis." target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp <span aria-hidden="true">↗</span></a></div>
+      </section>
+    </main>
+    <footer class="site-footer"><a class="wordmark" href="#inicio" aria-label="WR E-Bikes, voltar ao início"><span class="mark">WR</span><span class="mark-name">E-BIKES</span></a><p>Protótipo conceitual · Fotos de referência · Informações comerciais a confirmar.</p><a class="footer-top" href="#inicio">Voltar ao topo ↑</a></footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
+
